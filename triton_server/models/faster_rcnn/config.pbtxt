@@ -3,29 +3,29 @@ default_model_filename: "model.ts"
 max_batch_size: 0
 input [
   {
-    name: "image__0"
+    name: "image"
     data_type: TYPE_UINT8
     dims: [3, -1, -1]
   }
 ]
 output [
   {
-    name: "bboxes__0"
+    name: "bboxes"
     data_type: TYPE_FP32
     dims: [-1,4]
   },
   {
-    name: "classes__1"
+    name: "classes"
     data_type: TYPE_INT64
     dims: [-1]
   },
   {
-    name: "scores__2"
+    name: "scores"
     data_type: TYPE_FP32
     dims: [-1]
   },
   {
-    name: "shape__3"
+    name: "shape"
     data_type: TYPE_INT64
     dims: [-1]
   }
