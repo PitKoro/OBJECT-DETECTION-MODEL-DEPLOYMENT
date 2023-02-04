@@ -10,7 +10,7 @@
 В этом проекте реализовано два сервиса:
 - **jupyter** - обучение, валидация и экспорт модели детекции + клиент для тритона.
 - **triton** - инференс готовой модели детекции.
-![image](imgs/inference.png)
+![image](imgs/arch.png)
 Блокноты:
 - [Обучение, валидация и экспорт модели детекции](https://github.com/PitKoro/SberCloudTestTask/blob/main/detectron-train-export-to-torchscript/notebooks/train.ipynb)
 - [Пример инференса обученной модели](https://github.com/PitKoro/SberCloudTestTask/blob/main/detectron-train-export-to-torchscript/notebooks/inference.ipynb)
