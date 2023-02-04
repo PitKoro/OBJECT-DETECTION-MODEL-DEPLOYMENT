@@ -29,6 +29,7 @@ services:
         condition: service_healthy
     ports:
     - 8888:8888
+    - 5151:5151
     volumes:
       - ./detectron-train-export-to-torchscript/dataset/:/app/dataset
       - ./detectron-train-export-to-torchscript/checkpoints/:/app/checkpoints

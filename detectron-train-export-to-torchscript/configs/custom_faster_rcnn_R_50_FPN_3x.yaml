@@ -1,7 +1,7 @@
 _BASE_: "/app/detectron2/configs/COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
 MODEL:
-  WEIGHTS: "/app/notebooks/checkpoints/model_final.pth"
+  WEIGHTS: "/app/checkpoints/detectron2/faster_rcnn_R_50/model_final.pth"
   ROI_HEADS:
-    NUM_CLASSES: 1
+    NUM_CLASSES: 80
     SCORE_THRESH_TEST: 0.7
     

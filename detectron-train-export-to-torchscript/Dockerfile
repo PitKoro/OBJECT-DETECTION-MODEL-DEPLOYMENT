@@ -3,9 +3,9 @@ FROM pytorch/pytorch:1.12.0-cuda11.3-cudnn8-devel
 RUN apt-get -y update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN apt-get -y install git
-RUN apt-get install -y wget
+RUN apt-get install -y wget unzip
 
-RUN pip install opencv-python tensorboard cmake onnx tqdm  tritonclient[all] jupyterlab
+RUN pip install opencv-python pycocotools tensorboard cmake onnx tqdm  tritonclient[all] jupyterlab bbox-visualizer
 WORKDIR /app
 
 RUN git clone https://github.com/facebookresearch/detectron2.git
