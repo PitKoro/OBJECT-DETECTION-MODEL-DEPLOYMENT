@@ -21,7 +21,7 @@
 ## Как запустить
 
 1. Поставить [nvidia-docker и nvidia-docker2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
-2. Скачать веса модели и перенести содержимое архива в `triton_server/models/faster_rcnn/1` - [Скачать веса]()
+2. Скачать веса модели и перенести содержимое архива в `triton_server/models/faster_rcnn/1` - [Скачать веса](https://github.com/PitKoro/SberCloudTestTask/releases/download/triton/faster_rcnn_torchscript_model.tar.xz)
 3. Запуск через docker-compose
 
 ```shell
