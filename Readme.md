@@ -1,4 +1,4 @@
-##  Деплой модели детекции с помощью NVIDIA Triton Inference Server
+##  Обучение и деплой модели детекции с помощью NVIDIA Triton Inference Server и KServe
 
 ![docker](https://img.shields.io/badge/docker-%232496ED.svg?&style=for-the-badge&logo=docker&logoColor=white)
 ![python](https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white)
