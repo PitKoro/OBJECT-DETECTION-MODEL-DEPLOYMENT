@@ -25,7 +25,7 @@
 3. Запуск через docker-compose
 
 ```shell
-docker compose up
+docker compose up --build
 ```
 
 ## Тесты

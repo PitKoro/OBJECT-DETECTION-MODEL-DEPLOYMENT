@@ -1,0 +1,1 @@
+Директория должна сущесвовать, иначе выдаст ошибку `Not loaded: No model version was found`
