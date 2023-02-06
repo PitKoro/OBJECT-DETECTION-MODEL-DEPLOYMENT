@@ -12,9 +12,9 @@
 - **triton** - инференс готовой модели детекции.
 ![image](imgs/arch.png)
 Блокноты:
-- [Обучение, валидация и экспорт модели детекции](https://github.com/PitKoro/SberCloudTestTask/blob/main/detectron-train-export-to-torchscript/notebooks/train.ipynb)
-- [Пример инференса обученной модели](https://github.com/PitKoro/SberCloudTestTask/blob/main/detectron-train-export-to-torchscript/notebooks/inference.ipynb)
-- [Тест инференса модели в NVIDIA Triton Inference Server](https://github.com/PitKoro/SberCloudTestTask/blob/main/detectron-train-export-to-torchscript/notebooks/client_for_triton.ipynb)
+- [Обучение, валидация и экспорт модели детекции](https://github.com/PitKoro/SberCloudTestTask/blob/main/jupyter/notebooks/train.ipynb)
+- [Пример инференса обученной модели](https://github.com/PitKoro/SberCloudTestTask/blob/main/jupyter/notebooks/inference.ipynb)
+- [Тест инференса модели в NVIDIA Triton Inference Server](https://github.com/PitKoro/SberCloudTestTask/blob/main/jupyter/notebooks/client_for_triton.ipynb)
 
 Запуск **tensorboard** во время обучения находится в блокноте с обучением.
 

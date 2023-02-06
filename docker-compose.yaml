@@ -10,7 +10,7 @@ services:
       - 8001:8001
       - 8002:8002
     volumes:
-      - ./triton_server/models:/models    
+      - ./triton/models:/models    
     command: 'tritonserver --model-repository=/models'
     deploy:
       resources:
@@ -19,23 +19,37 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
-    healthcheck:
-      test: "curl -v localhost:8000/v2/health/ready"
+    # healthcheck:
+      # test: "curl -v localhost:8000/v2/health/ready"
+
+  kserve:
+    build: ./kserve
+    ports:
+      - 8080:8080
+    volumes:
+      - ./kserve/configs/:/app/configs
+      - ./kserve/weights/:/app/weights
+    container_name: kserve
+    command: 'python app.py'
+    # healthcheck:
+    #   test: "curl -v localhost:8080/v2/health/ready"
 
   jupyter:
-    build: ./detectron-train-export-to-torchscript
-    depends_on:
-      triton:
-        condition: service_healthy
+    build: ./jupyter
+    # depends_on:
+    #   kserve:
+    #     condition: service_healthy
+    #   triton:
+    #     condition: service_healthy
     ports:
     - 8888:8888
     - 5151:5151
     volumes:
-      - ./detectron-train-export-to-torchscript/dataset/:/app/dataset
-      - ./detectron-train-export-to-torchscript/checkpoints/:/app/checkpoints
-      - ./detectron-train-export-to-torchscript/src/:/app/src
-      - ./detectron-train-export-to-torchscript/configs/:/app/configs
-      - ./detectron-train-export-to-torchscript/notebooks/:/app/notebooks
+      - ./jupyter/dataset/:/app/dataset
+      - ./jupyter/checkpoints/:/app/checkpoints
+      - ./jupyter/src/:/app/src
+      - ./jupyter/configs/:/app/configs
+      - ./jupyter/notebooks/:/app/notebooks
     container_name: jupyter
     deploy:
       resources:
